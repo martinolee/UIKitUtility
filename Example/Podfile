@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'UIKitUtility_Example' do
+  pod 'UIKitUtility', :path => '../'
+
+  target 'UIKitUtility_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
