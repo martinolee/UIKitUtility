@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol UIViewUtility {
+public protocol UIViewUtility {
   /**
   Adds views to the end of the receiver’s list of subviews.
   
@@ -17,7 +17,7 @@ protocol UIViewUtility {
 }
 
 extension UIView: UIViewUtility {
-  func addSubviews(_ views: [UIView]) {
+  public func addSubviews(_ views: [UIView]) {
     for view in views {
       self.addSubview(view)
     }

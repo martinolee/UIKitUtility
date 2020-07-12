@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol UITableViewUtility {
+public protocol UITableViewUtility {
   /**
    registers a class for use in creating new table cells.
    
@@ -36,17 +36,17 @@ protocol UITableViewUtility {
 }
 
 extension UITableView: UITableViewUtility {
-  func register<Cell>(cell: Cell.Type) where Cell: UITableViewCell {
+  public func register<Cell>(cell: Cell.Type) where Cell: UITableViewCell {
     register(cell, forCellReuseIdentifier: cell.identifier)
   }
   
   
-  func dequeue<Cell>(_ reusableCell: Cell.Type) -> Cell where Cell: UITableViewCell {
+  public func dequeue<Cell>(_ reusableCell: Cell.Type) -> Cell where Cell: UITableViewCell {
     dequeueReusableCell(withIdentifier: reusableCell.identifier) as! Cell
   }
   
   
-  func dequeue<Cell>(_ reusableCell: Cell.Type, for indexPath: IndexPath) -> Cell where Cell: UITableViewCell {
+  public func dequeue<Cell>(_ reusableCell: Cell.Type, for indexPath: IndexPath) -> Cell where Cell: UITableViewCell {
     dequeueReusableCell(withIdentifier: reusableCell.identifier, for: indexPath) as! Cell
   }
 }
