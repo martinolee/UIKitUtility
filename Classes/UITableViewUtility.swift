@@ -7,7 +7,7 @@
 
 import UIKit
 
-public protocol UITableViewUtility {
+public protocol UITableViewUtility where Self: UITableView {
   /**
    registers a class for use in creating new table cells.
    
