@@ -7,7 +7,7 @@
 
 import UIKit
 
-public protocol UIViewUtility {
+public protocol UIViewUtility where Self: UIView {
   /**
   Adds views to the end of the receiver’s list of subviews.
   
